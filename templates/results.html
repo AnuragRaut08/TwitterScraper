@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>These are the most happening topics:</h1>
+    <p>As on {{ record['timestamp'] }}</p>
+    <ul>
+        <li>{{ record['nameoftrend1'] }}</li>
+        <li>{{ record['nameoftrend2'] }}</li>
+        <li>{{ record['nameoftrend3'] }}</li>
+        <li>{{ record['nameoftrend4'] }}</li>
+        <li>{{ record['nameoftrend5'] }}</li>
+    </ul>
+    <p>The IP address used for this query was {{ record['ip_address'] }}</p>
+    <h2>JSON Extract:</h2>
+    <pre>{{ record }}</pre>
+    <a href="/">Click here to run the query again</a>
+</body>
+</html>
