@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Click below to fetch Twitter Trending Topics</h1>
+    <a href="/run_scraper"><button>Click here to run the script</button></a>
+    
+    {% if data %}
+        <h2>These are the most happening topics as of {{ data.timestamp }}</h2>
+        <p>IP Address Used: {{ data.ip_address }}</p>
+        <p>Trend 1: {{ data.trend1 }}</p>
+        <p>Trend 2: {{ data.trend2 }}</p>
+        <p>Trend 3: {{ data.trend3 }}</p>
+        <p>Trend 4: {{ data.trend4 }}</p>
+        <p>Trend 5: {{ data.trend5 }}</p>
+        
+        <h3>JSON Extract from MongoDB</h3>
+        <pre>{{ data | tojson }}</pre>
+    {% endif %}
+</body>
+</html>
