@@ -87,17 +87,30 @@ python app.py
 
 ## **Folder Structure**
 ```
-TwitterScraper/
+twitter_trends_scraper/
 │
-├── static/              # Optional for additional CSS/JS files
-├── templates/           # HTML templates for the Flask web app
-│   ├── index.html       # Landing page
-│   ├── results.html     # Results display page
-├── app.py               # Flask application
-├── selenium_script.py   # Selenium script for scraping
-├── requirements.txt     # Python dependencies
-└── README.md            # Project documentation
-```
+├── app/
+│   ├── __init__.py                   # Initialize Flask app
+│   ├── routes.py                     # Define routes for the app (Flask)
+│   ├── static/
+│   │   └── style.css                 # Custom CSS for frontend styling
+│   ├── templates/
+│   │   └── index.html                # Main HTML template with buttons and results
+│   └── dash_app.py                   # Dash app for data visualization
+│
+├── scripts/
+│   ├── twitter_scraper.py            # Selenium scraper script with proxy rotation
+│   ├── analysis.py                   # Script for data analysis and categorization
+│   └── database_connector.py         # MongoDB connection setup
+│
+├── data/
+│   └── trend_analysis.csv            # Analysis results saved from the database
+│
+├── requirements.txt                 # Python dependencies
+├── Procfile                         # For Heroku deployment
+├── README.md                        # Project documentation
+└── .gitignore                       # Ignore unnecessary files/folders (e.g., virtualenv, logs)
+
 
 ---
 
