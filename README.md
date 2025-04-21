@@ -1,7 +1,7 @@
 # TwitterScraper
 
 
-This project is designed to scrape the top 5 trending topics from Twitter's "What’s Happening" section using **Selenium** and **ProxyMesh**, store the scraped data in a **MongoDB** database, and display the results on a simple web interface powered by **Flask**.
+This project is designed to scrape the top 5 trending topics from Twitter's "What’s Happening" section using **Selenium** and **ProxyMesh**, store the scraped data in a **MongoDB** database, and display the results on a simple web UI powered by **Flask**.
 
 ---
 
