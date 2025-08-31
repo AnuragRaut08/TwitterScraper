@@ -7,6 +7,7 @@ import time
 import uuid
 import requests
 
+
 # MongoDB Setup
 client = MongoClient("mongodb://localhost:27017/")
 db = client["twitter_trends"]
